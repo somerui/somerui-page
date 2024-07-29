@@ -1,59 +1,138 @@
-or<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>somerui here.</title>
-		<link rel="stylesheet" type="text/css" href="./css/style.css">
-		<link href="/css/fonts.css" rel="stylesheet">
-		<script>
-			document.getElementById('open-warn').addEventListener('click', function(event) {
-				event.preventDefault(); // Prevent the default action of the link
-				document.getElementById('warn').showModal(); // Open the dialog
-			});
-		</script>
-	
+	<style>
 
+@font-face {
+	font-family: 'Exo';
+	font-style: italic;
+	src: url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap') format('ttf');
+	unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	font-size: 150%;
+}
+
+main {
+	font-family: 'Exo', sans-serif;
+	color: #ffffff;
+	line-height: 1.5em;
+}
+
+#title {
+	font-family: 'Exo', sans-serif;
+	font-size: 1.5em;
+	padding-bottom: 0.75em;
+}
+
+#links {
+	border: 1.5px solid #888;
+	padding: 1.5em;
+	background-color: #000000;
+}
+
+#dialog {
+	border: 1.5px solid #888;
+	padding: 1.5em;
+	background-color: #000000;
+}
+
+#dialog1 {
+	border: 1.5px solid #888;
+	padding: 1.5em;
+	background-color: #000000;
+}
+
+#misc {
+	padding-top: 0.75em;
+}
+
+.clsd {
+	text-decoration: line-through;
+}
+.sub {
+	font-style: italic;
+	font-size: 0.75em;
+}
+
+
+
+a {color: #8ac; text-decoration: none;}
+
+a:hover {text-decoration: underline;}
+		</style>
 	</head>
-
-<!--
-	Ë
--->
-
 	<body>
 		<main>
 			
 			<div id="title" >
-				 somerui
+				somerui
 			</div>
 			<div id="links">
-				<div class="lnk">
-					<a href="https://orcid.org/0009-0002-8593-6862/" target="_blank">ORCID</a>
-				</div>
             	<div class="lnk">
-					<a href="https://https://space.bilibili.com/3494363709573649/" target="_blank">bilibili(somerui_)</a>
+					<a href="https://https://space.bilibili.com/3494363709573649/" target="_blank">bilibili</a>
 				</div>
 				<div class="lnk">
 					<a href="https://github.com/somerui" target="_blank">GitHub</a>
 				</div>
 				<div class="lnk">
+					<a href="https://soundcloud.com/somerui" target="_blank">SoundCloud</a>
+				</div>
+				<div class="lnk">
 					<a href="https://x.com/somerui7634" target="_blank">Twitter</a>
 				</div>
 				<div class="lnk">
-					<a href="https://www.twitch.tv/somerui_" target="_blank">Twitch</a>
+					<a href="https://modrinth.com/user/somerui " target="_blank">Modrinth</a>
 				</div>
 				<div class="lnk">
-					<a href="https://www.facebook.com/somerui" target="_blank">Facebook</a>
+					<a href="https://www.youtube.com/@somerui7634" target="_blank">YouTube</a>
 				</div>
 				<div class="lnk">
-					<a href="https://www.youtube.com/@somerui_" target="_blank">YouTube</a>
+					<a href="https://somerui.newgrounds.com/" target="_blank">Newgrounds</a>
+				</div>
+				<div class="lnk">
+					<a href="https://somerui.lofter.com/" target="_blank">Lofter</a>
 				</div>
 			</div>
         	<div class="misc">
-            	<a href="/more.html" target="_self">More..</a>
-            </div>
+            <h3>Contact</h3>
+			<a href="#open-warn1" id="email-contact">Email Contact</a>
+    <dialog id="dialog" class="email-contact1">
+            <div style="color: white;font-family: Exo, sans-serif;">
+				<h1>Contacts</h1>
+				<p><strong style="color: red;">CLOSED FOR EMAIL CONTACT.</strong></p>
+				</p>
+				<form method="dialog">
+					<button type="submit">Close</button>
+				</form>
+			</div>
+        </div>
+    </dialog>
+    <script>
+        document.getElementById('email-contact').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default action of the link
+            document.getElementById('dialog').showModal(); // Open the dialog
+        });
+    </script>
+	</div>
 			
 		</div>
 	</main>
 	
 
-</body></html>
+</body>
+</html>
